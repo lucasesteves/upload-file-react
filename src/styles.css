@@ -1,0 +1,45 @@
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.drop-card {
+    height: 200px;
+    width: 600px;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 16px;
+}
+
+.drop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #9fe2bf;
+}
+
+.files-container {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.file {
+    display: flex;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #4f7566;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.progress {
+    margin-left: 12px;
+}
