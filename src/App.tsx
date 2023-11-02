@@ -4,12 +4,17 @@ import { sendUpload } from "./server"
 
 const chunkSize = 1 * 1024 * 1024;
 
+interface FileName {
+  finalFileName: string,
+  index: number
+}
+
 function App() {
-  const [files, setFiles] = useState<any>([])
+  const [files, setFiles] = useState<File[]>([])
   const [currentFileIndex, setCurrentFileIndex] = useState<any>(null);
   const [lastUploadedFileIndex, setLastUploadedFileIndex] = useState(null)
   const [currentChunkIndex, setCurrentChunkIndex] = useState<number>(-1)
-  const [filesname, setFilesname] = useState<any>([])
+  const [filesname, setFilesname] = useState<FileName[]>([])
 
   const handleDrop = (selectedFiles: any) => {
     setFiles([...files, ...selectedFiles])
